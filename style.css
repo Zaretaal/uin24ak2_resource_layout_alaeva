@@ -1,0 +1,19 @@
+body{
+    background-color: #2A324B;
+}
+#container {
+    background-color: #58699D;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1rem;
+}
+main article a{
+    color: var(--yellow);
+    text-decoration: none;
+    fontsize: 1rem;
+
+}
