@@ -4,24 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" media="alt">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="container">
     <header>
         <main>
             <nav>
-                <ul>
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JAVASCRIPT</a></li>
-                    <li><a href="#">REACT</a></li>
-                    <li><a href="#">SANITY AND HEADLESS CNN</a></li>
+                <div>
+                <ul id="category">
                 </ul>
+                </div>
             </nav>
+            <section id="content">
+
+
+            </section>
         </main>
     </header>
     </div>
-    
+    <script src = "ressurser.js">
+        </script>
+
+        <script>
+            let category =""
+            resources.map(resource => {
+                category+=`<li><a href="#" onClick='myFunction("${resource.category}")'>${resource.category}</a></li>`
+
+            })
+            document.getElementById("category").innerHTML=category
+            let content=""
+            resources.map(resource => {
+                content += "<article class='hidden'id='"+resource.category+"'><h2>" + resource.text+"</h2>"
+                    content+="<ul>"
+                    resource.sources.map(resource2=>{
+                        content+="<li><a href='"+resource2.url+"'>"+resource2.title +"</li></a>"
+                    })
+                    content+="</ul></article>"
+            })
+            document.getElementById("content").innerHTML=content
+            function myFunction(category){
+                resources.map(resource => {
+                    b=document.getElementById(resource.category)
+                    console.log(b)
+                    if(b.classList.contains("hidden")&&resource.category==category){
+                        b.classList.toggle("hidden")
+                    }
+                    else{
+                        b.classList.add("hidden")
+                    }
+                })
+            }
+
+        </script>
 </body>
 </html>
