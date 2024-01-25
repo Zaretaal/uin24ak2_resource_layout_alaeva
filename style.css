@@ -44,7 +44,6 @@ main article a{
     justify-content: center;
     align-items: baseline;
     position: relative;
-    height: 100%;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
@@ -59,7 +58,7 @@ main article a{
     flex-basis: 5%;
     margin: 0 auto;
     flex-grow:1;
-    height: 100%;
+   
 }
 
 
@@ -111,7 +110,6 @@ nav li{
     justify-content: space-between;
     align-items: stretch;
     column-gap: 1rem;
-    min-height: 15vw;
 }
 li a{
     color: white;
